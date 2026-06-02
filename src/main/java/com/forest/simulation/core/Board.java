@@ -9,15 +9,23 @@ public class Board {
     private int height;
     private Cell[][] grid;
 
-    public Cell getCell(int x, int y) {
-        return null;
-    }
-
-    public List<Cell> getNeighbors(int x, int y, int radius) {
-        return null;
+    public Board(int width, int height) {
+        this.width = width;
+        this.height = height;
+        this.grid = new Cell[width][height];
     }
 
     public int wrapCoordinate(int value, int max) {
-        return 0; // Tu zrobimy matematykę dla zawijania krawędzi planszy (torus)
+        return ((value % max) + max) % max;
+    }
+
+    public Cell getCell(int x, int y) {
+        int wrappedX = wrapCoordinate(x, width);
+        int wrappedY = wrapCoordinate(y, height);
+        return grid[wrappedX][wrappedY];
+    }
+
+    public List<Cell> getNeighbors(int x, int y, int radius) {                          //TODO: napisać ta funkcję
+        return null;
     }
 }

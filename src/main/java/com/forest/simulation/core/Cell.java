@@ -7,19 +7,34 @@ public class Cell {
     private int regrowthCountdown;
 
     public Cell(int x, int y, String state, int regrowthCountdown) {
-
+        this.x = x;
+        this.y = y;
+        this.state = state;
+        this.regrowthCountdown = regrowthCountdown;
     }
 
     public void chopDown() {
-        // Zmiana stanu na pusty
+        this.state = "Empty";
+        this.regrowthCountdown = regrowthCountdown;
     }
 
-    public boolean hasAdultTreeNeighbor() {
-        return false;
+    public boolean hasAdultTreeNeighbor(Board board) {
+        return false;                                                                       //TODO: napisać tą metodę
     }
 
     public void grow() {
-        // Odliczanie czasu do odrośnięcia drzewa
+        if (this.regrowthCountdown > 0) {
+            this.regrowthCountdown--;
+        }
+
+        if (this.regrowthCountdown == 0) {
+            this.state = "Tree";
+        }
     }
+
+    public int getX() { return x; }
+    public int getY() { return y; }
+    public String getState() { return state; }
+    public int getRegrowthCountdown() { return regrowthCountdown; }
 }
 

@@ -28,4 +28,12 @@ public class Board {
     public List<Cell> getNeighbors(int x, int y, int radius) {                          //TODO: napisać ta funkcję
         return null;
     }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
 }

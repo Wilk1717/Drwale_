@@ -6,10 +6,10 @@ import java.util.Random;
 public abstract class Agent {
     protected int x;
     protected int y;
-    protected Board board; // Referencja do planszy, żeby agent wiedział, po czym chodzi
-    protected Random random; // Generator losowości do ruchów
+    protected Board board;
+    protected Random random;
 
-    // Konstruktor - tworząc agenta, od razu mówimy mu gdzie stoi i na jakiej planszy
+
     public Agent(int startX, int startY, Board board) {
         this.x = startX;
         this.y = startY;
@@ -17,10 +17,10 @@ public abstract class Agent {
         this.random = new Random();
     }
 
-    // Każdy agent szuka celu po swojemu, więc zostawiamy to jako abstrakt
+
     public abstract void findTarget();
 
-    // Gotowa metoda na losowy spacer
+
     public void moveRandomly() {
         int dx, dy;
         do {
@@ -33,7 +33,6 @@ public abstract class Agent {
     }
 
     public void moveToTarget() {
-        // TODO: Zaimplementować ruch w kierunku konkretnego celu (wymaga znajomości celu)
     }
 
     public int getX() { return x; }

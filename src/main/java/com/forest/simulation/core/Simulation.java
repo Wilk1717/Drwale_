@@ -17,10 +17,10 @@ public class Simulation {
     private List<Agent> agents;
 
     public void setup() {
-        // Tu będzie logika inicjalizacji agentów i planszy
+
     }
 
     public void step() {
-        // Tu będzie główna pętla wykonująca ruchy wszystkich agentów
+
     }
 }

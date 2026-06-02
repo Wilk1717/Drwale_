@@ -1,4 +1,4 @@
 package com.forest.simulation.agents;
 
-public class Agents {
+public class Agent {
 }

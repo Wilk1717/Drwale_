@@ -1,6 +1,6 @@
 package com.forest.simulation.core;
 
-import com.forest.simulation.agents.Agents;
+import com.forest.simulation.agents.Agent;
 import java.util.List;
 
 public class Simulation {
@@ -14,7 +14,7 @@ public class Simulation {
     private int rangerPatrolParameter;
 
     private Board board;
-    private List<Agents> agents;
+    private List<Agent> agents;
 
     public void setup() {
         // Tu będzie logika inicjalizacji agentów i planszy

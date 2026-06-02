@@ -13,9 +13,9 @@ public class Cell {
         this.regrowthCountdown = regrowthCountdown;
     }
 
-    public void chopDown() {
+    public void chopDown(int regrowthTime) {
         this.state = "Empty";
-        this.regrowthCountdown = regrowthCountdown;
+        this.regrowthCountdown = regrowthTime;
     }
 
     public boolean hasAdultTreeNeighbor(Board board) {

@@ -1,4 +1,6 @@
-package com.las.symulacja.core;
+package com.forest.simulation.core;
+
+import com.forest.simulation.core.Cell;
 
 import java.util.List;
 
